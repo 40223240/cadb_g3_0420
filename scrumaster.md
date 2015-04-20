@@ -1,1 +1,1 @@
-# 由scrumaster組員葉正雄所寫的考試報告
+# 由 scrumaster 組員所寫的考試報告
