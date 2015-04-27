@@ -588,6 +588,16 @@ class Hello(object):
     spur.Spur(ctx).Gear(400+rp_g1+rp_g2+rp_g3,400+rp_g2,rp_g3,n_g3, pa, "red")
     ctx.restore()
 
+    ctx.save()
+    # translate to the second of third gear
+    ctx.translate(400+rp_g1+rp_g2+rp_g3+rp_g4,400)
+    # rotate to engage
+    ctx.rotate(-pi/2-pi/n_g2+pi/n_g3+pi/n_g4)
+    # put it back
+    ctx.translate(-(400+rp_g1+rp_g2+rp_g3+rp_g4),-400)
+    spur.Spur(ctx).Gear(400+rp_g1+rp_g2+rp_g3+rp_g4,400+rp_g2+rp_g3,rp_g4,n_g4, pa, "yellow")
+    ctx.restore()
+
     </script>
     <canvas id="plotarea" width="1200" height="1200"></canvas>
     </body>
